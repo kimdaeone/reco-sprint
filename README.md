@@ -36,7 +36,6 @@
 - **전공 프리패스**: 성적표 비고란에 수동으로 '기본이수'가 적힌 경우, 로직이 우선적으로 감지하여 자동 채색.(전산 시스템에서 기본이수 과정으로 인정한 과목은 
 
 ## 4. 실행 화면 (예시)
-*(이곳에 채색 전/후 성적표 캡쳐 이미지를 넣어주세요)*
 | 채색 전 | 채색 후 |
 | :--- | :--- |
 | ![Before](https://via.placeholder.com/350x150?text=Original+Transcript) | ![After](https://via.placeholder.com/350x150?text=Color+Mapped+Transcript) |
