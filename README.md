@@ -33,17 +33,33 @@
 ### ✅ 예외 상황 처리 (Data Cleaning)
 - **병합 셀 인식**: 분류명이 상단 셀에만 적혀 있는 병합된 구조(병합된 셀의 head에서만 데이터가 인식됨(A1, B1, C1의 경우 B1, C1에서 데이터를 받을 수 없다.))에서도 <br>루프문을 통해 상위 카테고리를 역추적하여 인식.
 - **가변 열 대응**: 학번별로 기준표의 열 위치가 달라도 연도를 추적하여 해당 열의 데이터를 정확히 참조.
-- **전공 프리패스**: 성적표 비고란에 수동으로 '기본이수'가 적힌 경우, 로직이 우선적으로 감지하여 자동 채색.(전산 시스템에서 기본이수 과정으로 인정한 과목은 
+- **전공 프리패스**: 성적표 비고란에 수동으로 '기본이수'가 적힌 경우, 로직이 우선적으로 감지하여 자동 채색.(전산 시스템에서 기본이수 과정으로 인정한 과목이 항상 1순위가 된다.)
+- **변수가 존재하는 학과**: 동양어문학과는 일본어와 중국어로 나뉨. 그러나 성적표 내에서 구분할 수 있는 수단이 없음. 따라서 동양어문은 더 많이 수강한 과목명으로 다른 조건을 부여하도록 판단함.
 
 ## 4. 실행 화면 (예시)
+| 졸업 기준 점검 |
+| :--- |
+| ![점검표](https://github.com/user-attachments/assets/46afe82d-8f09-42d2-a0e5-d44c982045a1) |
+
+| 과목별 기준 |
+| :--- |
+| ![색상표](https://github.com/user-attachments/assets/13325516-f888-4099-aa5b-7bff7b5f6374) |
+
 | 채색 전 | 채색 후 |
 | :--- | :--- |
-| ![Before](https://via.placeholder.com/350x150?text=Original+Transcript) | ![After](https://via.placeholder.com/350x150?text=Color+Mapped+Transcript) |
+| ![Before](https://github.com/user-attachments/assets/72b40f29-7f2f-44f8-a370-b49ab14f9f1d) | ![After](https://github.com/user-attachments/assets/8b3894f6-02c4-49ba-baa7-9e353bff8e0a) |
 
-## 5. 설치 및 사용 방법
-1. 본 저장소의 `Graduation_Check_System.xlsm` 파일을 다운로드합니다.
-2. 분석하고자 하는 **성적표 파일**을 별도로 엽니다.
-3. 매크로를 실행(`Alt+F8` -> `ColorCode_Final_Ver10`)하면 성적표 파일에 즉시 분석 결과가 반영됩니다.
+| 색상기준 |
+| :--- |
+| ![색상표](https://github.com/user-attachments/assets/0187aa25-8371-4a77-a128-e1fb5e55fa9a) |
+
+| 문제의 동양어문 |
+| :--- |
+| ![점검표](https://github.com/user-attachments/assets/61b09e4d-b046-4a83-a8d0-0f3f22a16396) |
+
+동양어문학과는 성적표 안에서 일본어와 중국어를 구분할 수 있는 기준이 과목명 외에는 주어지지 않는다. 
+따라서 공통되는 과목을 제외한 언어별 기본이수 과목들을 구분이 가능하도록 데이터를 통합함.
+
 
 ---
 **email**: [ektlaksskgodqhrgo@gachon.ac.kr]
